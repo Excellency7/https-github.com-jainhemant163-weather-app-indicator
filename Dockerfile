@@ -2,7 +2,7 @@
 
 # Stage 1
 # Use the official Node.js runtime as the base image
-FROM node:18 as build
+FROM node:18 AS build
 
 # Set the working directory in the container
 WORKDIR /app
@@ -11,13 +11,13 @@ WORKDIR /app
 COPY package*.json ./
 
 # Install dependencies
-RUN npm install
+#RUN npm install
 
 # Copy the entire application code to the container
 COPY . .
 
 # Build the React app for production
-RUN npm run build
+#RUN npm run build
 
 
 
